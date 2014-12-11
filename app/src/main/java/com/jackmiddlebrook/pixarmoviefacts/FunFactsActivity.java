@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 public class FunFactsActivity extends Activity {
 
-    private MovieList mMovieList = new MovieList();
     private ColorWheel mColorWheel = new ColorWheel();
     private int mIndex = 0;
 
