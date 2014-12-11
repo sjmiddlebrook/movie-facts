@@ -1,5 +1,7 @@
 package com.jackmiddlebrook.pixarmoviefacts;
 
+import android.content.res.Resources;
+
 /**
  * Gets the next fact from the list of facts.
  * Created by jackmiddlebrook on 10/5/14.
@@ -39,6 +41,8 @@ public class FactBook {
             "The campus of Monsters University was inspired by the campuses of UC Berkeley, Stanford, Harvard and MIT."
     };
 
+    private String[] mFactArray = Resources.getSystem().getStringArray(R.array.movie_fact_array);
+
     // Methods
     public String getFact() {
 
@@ -46,7 +50,7 @@ public class FactBook {
         // Increment the fact and movie index
         mIndex++;
 
-        fact = mFacts[mIndex % mFacts.length];
+        fact = mFactArray[mIndex % mFactArray.length];
 
         return fact;
 

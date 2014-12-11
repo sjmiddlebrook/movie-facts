@@ -1,7 +1,7 @@
 package com.jackmiddlebrook.pixarmoviefacts;
 
 import android.app.Activity;
-import android.graphics.Color;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,9 +13,9 @@ import android.widget.TextView;
 
 public class FunFactsActivity extends Activity {
 
-    private FactBook mFactBook = new FactBook();
     private MovieList mMovieList = new MovieList();
     private ColorWheel mColorWheel = new ColorWheel();
+    private int mIndex = 0;
 
 
     @Override
@@ -33,18 +33,20 @@ public class FunFactsActivity extends Activity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mIndex++;
                 // The button was clicked so update the fact and movie strings
-                String fact = mFactBook.getFact();
-                String movie = mMovieList.getMovie();
                 int color = mColorWheel.getColor();
-
+                Resources res = getResources();
+                String[] movieFacts = res.getStringArray(R.array.movie_fact_array);
+                String fact = movieFacts[mIndex % movieFacts.length];
+                String[] movieNames = res.getStringArray(R.array.movie_name_array);
+                String movie = movieNames[mIndex % movieFacts.length];
                 // Update the fact and movie labels with the next values
                 factLabel.setText(fact);
                 movieLabel.setText(movie);
 
                 relativeLayout.setBackgroundColor(color);
                 showFactButton.setTextColor(color);
-
             }
         };
 
