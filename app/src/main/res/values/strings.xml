@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Movie Facts</string>
+    <string name="movie_name">Toy Story</string>
+    <string name="action_settings">Settings</string>
+    <string name="toy_story_fact">In November 1993, reels of Toy Story were brought in front of
+        Disney executives who decided to halt production and nearly gave up on the project.
+        Three months later, Pixar came back with a reworked script and the film was saved.</string>
+
+</resources>
