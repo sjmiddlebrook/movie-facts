@@ -11,19 +11,20 @@ public class ColorWheel {
     private int mIndex = 0;
 
     private String[] mColors = {
-            "#39add1", // light blue
-            "#3079ab", // dark blue
-            "#c25975", // mauve
-            "#e15258", // red
-            "#f9845b", // orange
-            "#838cc7", // lavender
-            "#7d669e", // purple
-            "#53bbb4", // aqua
-            "#51b46d", // green
-            "#e0ab18", // mustard
-            "#637a91", // dark gray
-            "#f092b0", // pink
-            "#b7c0c7"  // light gray
+            "#3F51B5",
+            "#2196F3",
+            "#0288D1",
+            "#0097A7",
+            "#009688",
+            "#4CAF50",
+            "#689F38",
+            "#F57F17",
+            "#E65100",
+            "#795548",
+            "#757575",
+            "#607D8B",
+            "#C62828",
+            "#7B1FA2"
     };
 
     public int getColor() {
